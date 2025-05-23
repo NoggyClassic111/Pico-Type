@@ -9,10 +9,10 @@ usb.active(False)
 desc_dev = bytes((
     18,   const(1),          # bLength, bDescriptorType = DEVICE
     0x00, 0x02,              # bcdUSB = 2.00
-    0x00, 0x00, 0x00,        # bDeviceClass/SubClass/Protocol = vendor-specific
-    64,                      # bMaxPacketSize0
-    0x8A, 0x2E,              # idVendor  = 0x2E8A   << CHANGED
-    0x06, 0x00,              # idProduct = 0x0005   << CHANGED
+    0x00, 0x00, 0x00,       
+    64,                     
+    0x8A, 0x2E,             
+    0x06, 0x00,             
     0x00, 0x01,              # bcdDevice = 1.00
     1, 2, 3,                 # iManufacturer, iProduct, iSerial
     1                        # bNumConfigurations
@@ -57,12 +57,12 @@ desc_report= (
 desc_cfg = bytes((
     9, 2,  34, 0,   # wTotalLength LSB/MSB
     1, 1, 0, 0xA0, 0x19,                    # 1 interface, 100 mA
-    # Interface 0
+ 
     9, 4, 0, 0, 1, 0x03, 0x01, 0x01, 0,
     
-    #HID Descriptors
+   
     0x09,0x21,0x11,0x01,0x00,0x01,0x22,0x3F,0x00,
-    # EP1  IN  bulk
+
     7, 5, 0x81, 3, 0x08, 0, 0x0A
  
    
